@@ -12,7 +12,7 @@ export default function App() {
       {/* Head */}
       <View style={styles.head}> 
         <View style={styles.circle}><Icon style={styles.navicon} name="navicon" size={45} color="#fff" /></View>
-        <Text style={styles.logo}>FUCBUC</Text>
+        <Text style={styles.logo}>TECHBOOK</Text>
         <View style={styles.circle}><Icon name="user" size={45} color="#fff" /></View>
       </View>
       {/* End of Head */}

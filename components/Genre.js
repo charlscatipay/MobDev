@@ -7,18 +7,12 @@ import Clickable from './GenreClickable'
 const Genre = () => {
     return(
         <ScrollView style={styles.container} horizontal={true}>
-            <Clickable text={'Teens'}/>
-            <Clickable text={'HomeMade'}/>
-            <Clickable text={'MILF'}/>
-            <Clickable text={'Asian'}/>
-            <Clickable text={'Petite'}/>
-            <Clickable text={'Step Daddy'}/>
-            <Clickable text={'Daughter'}/>
-            <Clickable text={'Sis'}/>
-            <Clickable text={'Indian'}/>
-            <Clickable text={'Family Swap'}/>
-            <Clickable text={'Busty'}/>
-            <Clickable text={'FWAG'}/>
+            <Clickable text={'Electronics'}/>
+            <Clickable text={'Computers'}/>
+            <Clickable text={'Processors'}/>
+            <Clickable text={'Cellphones'}/>
+            <Clickable text={'Video Cards'}/>
+            <Clickable text={'Installers'}/>
         </ScrollView>
     )
 }
