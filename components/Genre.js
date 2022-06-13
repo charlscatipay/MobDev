@@ -19,7 +19,7 @@ const Genre = () => {
 
 const styles = StyleSheet.create({
     container: {
-        width: '92%',
+        width: '93%',
         backgroundColor: '#D3D3D3',
         flex: 1,
         height: 40,

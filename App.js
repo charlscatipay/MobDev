@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 
 import Search from './components/Search'
 import Genre from './components/Genre'
+import Content from './components/Content'
 
 export default function App() {
   return (
@@ -21,13 +22,20 @@ export default function App() {
       <ScrollView style={styles.body}>
           <Search style={styles.pos} />
           <Genre/>
+          <Content/>
+          <Content/>
+          <Content/>
+          <Content/>
+          <Content/>
+          <Content/>
+          <Content/>
       </ScrollView>
       {/* End of Body */}
 
       {/* Footer */}
-      <View style={styles.footer}>
+      {/* <View style={styles.footer}>
 
-      </View>
+      </View> */}
       {/* End of Footer */}
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -39,7 +47,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#fff',
-    margin: 10,
   },
   body: {
     flex: 1,
