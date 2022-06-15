@@ -1,22 +1,33 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, ScrollView} from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput, ScrollView, Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 const Content = () => {
+    const [hot, setHot] = useState(0);
+    const [not, setNot] = useState(0);
+
     return(
         <View style={styles.container}>
             <View style={styles.content}>
 
             </View>
             <View style={styles.interaction}>
+                <Pressable style={styles.intActivity}
+                    onPress={() => {
+                        setHot((hot) => hot + 1)
+                    }}
+                >
+                    <Text style={styles.intText}> <Icon style={styles.navicon} name="fire" size={20} color="#D3D3D3" /> {hot} Hot</Text>
+                </Pressable>
+                <Pressable style={styles.intActivity}
+                    onPress={() => {
+                        setNot((not) => not + 1)
+                    }}
+                >
+                    <Text style={styles.intText}> <Icon style={styles.navicon} name="shield" size={20} color="#D3D3D3" /> {not} Not</Text>
+                </Pressable>
                 <View style={styles.intActivity}>
-                    <Text style={styles.intText}> <Icon style={styles.navicon} name="like2" size={20} color="#D3D3D3" /> </Text>
-                </View>
-                <View style={styles.intActivity}>
-                    <Text style={styles.intText}> <Icon style={styles.navicon} name="dislike2" size={20} color="#D3D3D3" /> </Text>
-                </View>
-                <View style={styles.intActivity}>
-                    <Text style={styles.intText}> <Icon style={styles.navicon} name="codesquareo" size={20} color="#D3D3D3" /> </Text>
+                    <Text style={styles.intText}> <Icon style={styles.navicon} name="menu" size={20} color="#D3D3D3" /> </Text>
                 </View>
 
             </View>

@@ -2,43 +2,55 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { SafeAreaView, } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/EvilIcons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Search from './components/Search'
 import Genre from './components/Genre'
 import Content from './components/Content'
 
+
+
 export default function App() {
+
+  const Stack = createNativeStackNavigator();
+
   return (
-    <SafeAreaView style={styles.container}>
-      {/* Head */}
-      <View style={styles.head}> 
-        <View style={styles.circle}><Icon style={styles.navicon} name="navicon" size={45} color="#fff" /></View>
-        <Text style={styles.logo}>TECHBOOK</Text>
-        <View style={styles.circle}><Icon name="user" size={45} color="#fff" /></View>
-      </View>
-      {/* End of Head */}
+    <NavigationContainer>
+      {/* <Stack.Navigator>
+        <Stack.Screen name="Search" component={Search} />
+      </Stack.Navigator> */}
+      <SafeAreaView style={styles.container}>
+        {/* Head */}
+        <View style={styles.head}> 
+          <View style={styles.circle}><Icon style={styles.navicon} name="navicon" size={45} color="#fff" /></View>
+          <Text style={styles.logo}>FUCBUC</Text>
+          <View style={styles.circle}><Icon name="user" size={45} color="#fff" /></View>
+        </View>
+        {/* End of Head */}
 
-      {/* Body */}
-      <ScrollView style={styles.body}>
-          <Search style={styles.pos} />
-          <Genre/>
-          <Content/>
-          <Content/>
-          <Content/>
-          <Content/>
-          <Content/>
-          <Content/>
-          <Content/>
-      </ScrollView>
-      {/* End of Body */}
+        {/* Body */}
+        <ScrollView style={styles.body}>
+            <Search style={styles.pos} />
+            <Genre/>
+            <Content/>
+            <Content/>
+            <Content/>
+            <Content/>
+            <Content/>
+            <Content/>
+            <Content/>
+        </ScrollView>
+        {/* End of Body */}
 
-      {/* Footer */}
-      {/* <View style={styles.footer}>
+        {/* Footer */}
+        {/* <View style={styles.footer}>
 
-      </View> */}
-      {/* End of Footer */}
-      <StatusBar style="auto" />
-    </SafeAreaView>
+        </View> */}
+        {/* End of Footer */}
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
