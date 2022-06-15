@@ -1,7 +1,10 @@
+import 'react-native-gesture-handler';
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Button } from 'react-native';
 import { SafeAreaView, } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/EvilIcons';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -9,7 +12,20 @@ import Search from './components/Search'
 import Genre from './components/Genre'
 import Content from './components/Content'
 
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    </View>
+  );
+}
 
+function NotificationsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    </View>
+  );
+}
+const Drawer = createDrawerNavigator();
 
 export default function App() {
 
@@ -23,7 +39,10 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         {/* Head */}
         <View style={styles.head}> 
-          <View style={styles.circle}><Icon style={styles.navicon} name="navicon" size={45} color="#fff" /></View>
+          <Drawer.Navigator>
+            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+          </Drawer.Navigator>
           <Text style={styles.logo}>FUCBUC</Text>
           <View style={styles.circle}><Icon name="user" size={45} color="#fff" /></View>
         </View>
